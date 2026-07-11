@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#070b15" />
+      <stop offset="100%" style="stop-color:#0f172a" />
+    </linearGradient>
+    <linearGradient id="header-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(7,11,21,0.95)" />
+      <stop offset="100%" style="stop-color:rgba(7,11,21,0.8)" />
+    </linearGradient>
+    <linearGradient id="grad-title" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee" />
+      <stop offset="100%" style="stop-color:#a78bfa" />
+    </linearGradient>
+    <linearGradient id="btn-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4" />
+      <stop offset="100%" style="stop-color:#0891b2" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glass">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="200" cy="600" rx="400" ry="200" fill="rgba(6,182,212,0.04)"/>
+  <ellipse cx="1000" cy="200" rx="300" ry="200" fill="rgba(139,92,246,0.03)"/>
+
+  <!-- Full background -->
+  <rect width="1200" height="800" fill="url(#bg)" rx="16"/>
+
+  <!-- === HEADER === -->
+  <rect x="0" y="0" width="1200" height="60" fill="url(#header-bg)" rx="16"/>
+  <rect x="0" y="58" width="1200" height="2" fill="rgba(51,65,85,0.3)"/>
+
+  <text x="24" y="30" fill="url(#grad-title)" font-family="Syne, sans-serif" font-size="22" font-weight="700" letter-spacing="-0.5">Archify AI</text>
+  <text x="24" y="48" fill="#64748b" font-family="Outfit, sans-serif" font-size="11">自然语言一键生成架构图</text>
+
+  <!-- Language toggle -->
+  <rect x="1080" y="18" width="96" height="28" rx="8" fill="rgba(7,11,21,0.5)" stroke="rgba(51,65,85,0.3)" stroke-width="1"/>
+  <text x="1092" y="37" fill="#22d3ee" font-family="Outfit, sans-serif" font-size="11" font-weight="500">中文</text>
+  <text x="1118" y="37" fill="#334155" font-family="Outfit, sans-serif" font-size="10">/</text>
+  <text x="1132" y="37" fill="#475569" font-family="Outfit, sans-serif" font-size="11" font-weight="500">EN</text>
+
+  <!-- === MAIN CONTENT === -->
+  <!-- Input Panel -->
+  <rect x="24" y="80" width="800" height="340" rx="16" fill="rgba(15,23,42,0.65)" stroke="rgba(51,65,85,0.3)" stroke-width="1"/>
+
+  <!-- Tabs -->
+  <rect x="48" y="100" width="752" height="38" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(51,65,85,0.15)" stroke-width="1"/>
+  <rect x="50" y="102" width="139" height="34" rx="8" fill="rgba(34,211,238,0.12)"/>
+  <text x="119" y="124" text-anchor="middle" fill="#22d3ee" font-family="Outfit, sans-serif" font-size="12" font-weight="500">架构图</text>
+  <text x="200" y="124" fill="#64748b" font-family="Outfit, sans-serif" font-size="12">流程图</text>
+  <text x="296" y="124" fill="#64748b" font-family="Outfit, sans-serif" font-size="12">时序图</text>
+  <text x="392" y="124" fill="#64748b" font-family="Outfit, sans-serif" font-size="12">数据流图</text>
+  <text x="500" y="124" fill="#64748b" font-family="Outfit, sans-serif" font-size="12">生命周期图</text>
+
+  <!-- Textarea -->
+  <rect x="48" y="156" width="752" height="90" rx="10" fill="rgba(7,11,21,0.6)" stroke="rgba(51,65,85,0.3)" stroke-width="1"/>
+  <text x="64" y="184" fill="#475569" font-family="Outfit, sans-serif" font-size="13" font-weight="300">请输入自然语言描述，例如：一个电商平台，前端 React，后端 Node.js，</text>
+  <text x="64" y="204" fill="#475569" font-family="Outfit, sans-serif" font-size="13" font-weight="300">PostgreSQL 数据库，Redis 缓存，部署在阿里云</text>
+
+  <!-- Generate button -->
+  <rect x="48" y="262" width="160" height="40" rx="10" fill="url(#btn-grad)" filter="url(#glow)"/>
+  <text x="128" y="287" text-anchor="middle" fill="white" font-family="Syne, sans-serif" font-size="13" font-weight="600">✨ 生成架构图</text>
+
+  <!-- Example prompts -->
+  <line x1="48" y1="318" x2="776" y2="318" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="48" y="338" fill="#64748b" font-family="Syne, sans-serif" font-size="10" letter-spacing="3" text-transform="uppercase">试试以下示例：</text>
+  <rect x="48" y="350" height="24" rx="6" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.06)" stroke-width="1" width="180"/>
+  <text x="58" y="367" fill="#64748b" font-family="Outfit, sans-serif" font-size="10">一个电商平台，前端 React...</text>
+  <rect x="236" y="350" height="24" rx="6" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.06)" stroke-width="1" width="170"/>
+  <text x="246" y="367" fill="#64748b" font-family="Outfit, sans-serif" font-size="10">微服务架构：网关层...</text>
+  <rect x="414" y="350" height="24" rx="6" fill="rgba(0,0,0,0.2)" stroke="rgba(255,255,255,0.06)" stroke-width="1" width="150"/>
+  <text x="424" y="367" fill="#64748b" font-family="Outfit, sans-serif" font-size="10">SaaS 平台架构...</text>
+
+  <!-- === PREVIEW PANEL === -->
+  <rect x="24" y="440" width="1152" height="340" rx="16" fill="rgba(15,23,42,0.65)" stroke="rgba(51,65,85,0.3)" stroke-width="1"/>
+
+  <!-- Preview placeholder -->
+  <rect x="552" y="560" width="64" height="64" rx="16" fill="none" stroke="rgba(51,65,85,0.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="555" y="563" width="20" height="20" rx="3" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <rect x="593" y="563" width="20" height="20" rx="3" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <rect x="555" y="601" width="20" height="20" rx="3" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <rect x="593" y="601" width="20" height="20" rx="3" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <text x="584" y="652" text-anchor="middle" fill="#475569" font-family="Outfit, sans-serif" font-size="13" font-weight="300">输入描述并点击生成，架构图将在此展示</text>
+</svg>

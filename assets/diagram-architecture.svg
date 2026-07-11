@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee" />
+      <stop offset="100%" style="stop-color:#06b6d4" />
+    </linearGradient>
+    <linearGradient id="grad-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa" />
+      <stop offset="100%" style="stop-color:#7c3aed" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="600" y="36" text-anchor="middle" fill="#f1f5f9" font-family="Syne, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.5">电商平台架构图</text>
+  <text x="600" y="54" text-anchor="middle" fill="#94a3b8" font-family="Outfit, sans-serif" font-size="12">微服务架构 · API 网关 · 消息队列 · 读写分离</text>
+
+  <!-- Region boundary -->
+  <rect x="50" y="72" width="1100" height="250" rx="10" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="70" y="90" fill="#64748b" font-family="Outfit, sans-serif" font-size="10" letter-spacing="2">私有网络 VPC</text>
+
+  <!-- ===== EXTERNAL ===== -->
+  <!-- Users -->
+  <rect x="80" y="180" width="130" height="64" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="145" y="210" text-anchor="middle" fill="#e2e8f0" font-family="Outfit, sans-serif" font-size="13" font-weight="600">用户</text>
+  <text x="145" y="228" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="10">浏览器 / App</text>
+
+  <!-- Arrow -->
+  <line x1="210" y1="212" x2="260" y2="212" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <polygon points="260,206 272,212 260,218" fill="#475569"/>
+
+  <!-- ===== CDN ===== -->
+  <rect x="272" y="180" width="120" height="64" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="332" y="210" text-anchor="middle" fill="#22d3ee" font-family="Outfit, sans-serif" font-size="13" font-weight="600">CDN</text>
+  <text x="332" y="228" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="10">静态资源加速</text>
+
+  <!-- Arrow -->
+  <line x1="392" y1="212" x2="442" y2="212" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="442,206 454,212 442,218" fill="#475569"/>
+  <text x="417" y="202" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">HTTPS</text>
+
+  <!-- ===== LB ===== -->
+  <rect x="454" y="180" width="130" height="64" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="519" y="210" text-anchor="middle" fill="#22d3ee" font-family="Outfit, sans-serif" font-size="13" font-weight="600">Nginx 网关</text>
+  <text x="519" y="228" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="10">负载均衡 :443</text>
+
+  <!-- Arrow -->
+  <line x1="584" y1="212" x2="634" y2="212" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="634,206 646,212 634,218" fill="#475569"/>
+
+  <!-- Region: microservices -->
+  <rect x="646" y="128" width="240" height="170" rx="8" fill="#1a1a2e" stroke="#334155" stroke-width="1"/>
+  <text x="656" y="146" fill="#64748b" font-family="Outfit, sans-serif" font-size="9" letter-spacing="1">微服务集群</text>
+
+  <!-- User Service -->
+  <rect x="656" y="156" width="108" height="54" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1"/>
+  <text x="710" y="182" text-anchor="middle" fill="#c4b5fd" font-family="Outfit, sans-serif" font-size="11" font-weight="500">用户服务</text>
+  <text x="710" y="196" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">:8081</text>
+
+  <!-- Order Service -->
+  <rect x="768" y="156" width="108" height="54" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1"/>
+  <text x="822" y="182" text-anchor="middle" fill="#c4b5fd" font-family="Outfit, sans-serif" font-size="11" font-weight="500">订单服务</text>
+  <text x="822" y="196" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">:8082</text>
+
+  <!-- Product Service -->
+  <rect x="710" y="216" width="108" height="54" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1"/>
+  <text x="764" y="242" text-anchor="middle" fill="#c4b5fd" font-family="Outfit, sans-serif" font-size="11" font-weight="500">商品服务</text>
+  <text x="764" y="256" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">:8083</text>
+
+  <!-- Arrow service to each other -->
+  <line x1="764" y1="210" x2="764" y2="216" stroke="#475569" stroke-width="1"/>
+  <polygon points="758,216 764,224 770,216" fill="#475569"/>
+
+  <!-- Arrow to services -->
+  <line x1="646" y1="180" x2="656" y2="180" stroke="#475569" stroke-width="1.5"/>
+  <polygon points="656,175 664,180 656,185" fill="#475569"/>
+
+  <!-- Arrow service to MQ -->
+  <line x1="870" y1="250" x2="960" y2="250" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <polygon points="960,244 972,250 960,256" fill="#475569"/>
+  <text x="915" y="242" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">异步</text>
+
+  <!-- ===== MQ ===== -->
+  <rect x="972" y="220" width="120" height="60" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="1032" y="250" text-anchor="middle" fill="#fcd34d" font-family="Outfit, sans-serif" font-size="12" font-weight="600">消息队列</text>
+  <text x="1032" y="266" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">RabbitMQ</text>
+
+  <!-- ===== DB (split) ===== -->
+  <rect x="80" y="290" width="130" height="54" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1"/>
+  <text x="145" y="316" text-anchor="middle" fill="#6ee7b7" font-family="Outfit, sans-serif" font-size="12" font-weight="500">MySQL 主库</text>
+  <text x="145" y="332" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">写入 :3306</text>
+
+  <rect x="220" y="290" width="130" height="54" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1"/>
+  <text x="285" y="316" text-anchor="middle" fill="#6ee7b7" font-family="Outfit, sans-serif" font-size="12" font-weight="500">MySQL 从库</text>
+  <text x="285" y="332" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">读取 :3307</text>
+
+  <!-- Arrow master to slave -->
+  <line x1="210" y1="317" x2="220" y2="317" stroke="#475569" stroke-width="1" stroke-dasharray="3 2"/>
+  <polygon points="220,312 228,317 220,322" fill="#475569"/>
+  <text x="215" y="308" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="8">主从复制</text>
+
+  <!-- Arrow services to DB -->
+  <line x1="710" y1="290" x2="285" y2="344" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <text x="500" y="336" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">SQL 读写分离</text>
+
+  <!-- Arrow service to cache -->
+  <line x1="822" y1="156" x2="1032" y2="110" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <polygon points="1032,104 1040,110 1032,116" fill="#475569"/>
+
+  <!-- ===== Redis ===== -->
+  <rect x="972" y="80" width="120" height="60" rx="8" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="1032" y="110" text-anchor="middle" fill="#fca5a5" font-family="Outfit, sans-serif" font-size="12" font-weight="600">Redis 缓存</text>
+  <text x="1032" y="126" text-anchor="middle" fill="#64748b" font-family="Outfit, sans-serif" font-size="9">会话 / 商品缓存</text>
+  <polygon points="1032,74 1040,80 1032,86" fill="#475569"/>
+
+  <!-- Card: Legends -->
+  <rect x="50" y="340" width="340" height="44" rx="8" fill="#1a1a2e" stroke="#334155" stroke-width="1"/>
+  <circle cx="74" cy="362" r="4" fill="#22d3ee"/>
+  <text x="84" y="366" fill="#94a3b8" font-family="Outfit, sans-serif" font-size="10">接入层 — CDN 加速、Nginx 负载均衡、HTTPS 证书</text>
+
+  <rect x="410" y="340" width="340" height="44" rx="8" fill="#1a1a2e" stroke="#334155" stroke-width="1"/>
+  <circle cx="434" cy="362" r="4" fill="#a78bfa"/>
+  <text x="444" y="366" fill="#94a3b8" font-family="Outfit, sans-serif" font-size="10">服务层 — Spring Cloud 微服务，服务注册与发现</text>
+
+  <rect x="770" y="340" width="380" height="44" rx="8" fill="#1a1a2e" stroke="#334155" stroke-width="1"/>
+  <circle cx="794" cy="362" r="4" fill="#34d399"/>
+  <text x="804" y="366" fill="#94a3b8" font-family="Outfit, sans-serif" font-size="10">数据层 — MySQL 读写分离、Redis 缓存、RabbitMQ 异步消息</text>
+</svg>

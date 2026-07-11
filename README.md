@@ -40,25 +40,17 @@
 
 ### 🖼️ Preview
 
-```
-┌─────────────────────────────────────────────────────┐
-│  Archify AI                                          │
-│  ┌──────────────────────────────────────────────────┐ │
-│  │ [Architecture] [Workflow] [Sequence] [Dataflow]  │ │
-│  │                      [Lifecycle]                  │ │
-│  ├──────────────────────────────────────────────────┤ │
-│  │ Describe your system in natural language...       │ │
-│  ├──────────────────────────────────────────────────┤ │
-│  │ [✨ Generate]                                      │ │
-│  │ Try an example:                                   │ │
-│  │ [E-commerce...] [Microservices...] [SaaS...]      │ │
-│  ├──────────────────────────────────────────────────┤ │
-│  │                                                  │ │
-│  │         🖼️  Architecture Diagram                  │ │
-│  │                                                  │ │
-│  └──────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="assets/app-screenshot.svg" alt="Archify AI App Screenshot" width="800"/>
+  <br/>
+  <em>AI-powered architecture diagram generator — describe your system, get a professional diagram</em>
+</p>
+
+<p align="center">
+  <img src="assets/diagram-architecture.svg" alt="Sample Architecture Diagram" width="800"/>
+  <br/>
+  <em>Example: E-commerce platform architecture (microservices, API gateway, message queue, read-write split)</em>
+</p>
 
 ### 🏗️ Architecture
 
