@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/api.ts","./src/main.tsx","./src/components/diagrampreview.tsx","./src/components/inputpanel.tsx","./src/components/ui/button.tsx","./src/components/ui/tabs.tsx","./src/i18n/index.ts","./src/i18n/react-i18next.d.ts","./src/lib/utils.ts","./src/pages/homepage.tsx"],"version":"5.6.3"}

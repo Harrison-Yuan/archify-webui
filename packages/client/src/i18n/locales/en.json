@@ -1,0 +1,27 @@
+{
+  "app.title": "Archify AI",
+  "app.desc": "Generate architecture diagrams from natural language",
+
+  "lang.zh": "中文",
+  "lang.en": "EN",
+
+  "tab.architecture": "Architecture",
+  "tab.workflow": "Workflow",
+  "tab.sequence": "Sequence",
+  "tab.dataflow": "Dataflow",
+  "tab.lifecycle": "Lifecycle",
+
+  "input.placeholder": "Describe your system, e.g.: An e-commerce platform with React frontend, Node.js backend, PostgreSQL database",
+
+  "btn.generate": "Generate",
+  "btn.generating": "Generating...",
+
+  "examples.label": "Try an example:",
+
+  "preview.placeholder": "Enter a description and generate an architecture diagram",
+  "preview.loading": "Generating diagram...",
+
+  "error.timeout": "Request timeout, please try again",
+  "error.network": "Network error, please check if the backend is running",
+  "error.default": "Generation failed, please try again"
+}

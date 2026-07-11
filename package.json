@@ -1,0 +1,17 @@
+{
+  "name": "archify-web",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/kill-port.mjs 3001 5173 && concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm run dev -w packages/server",
+    "dev:client": "npm run dev -w packages/client",
+    "build": "npm run build -w packages/client && npm run build -w packages/server",
+    "start": "npm run start -w packages/server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

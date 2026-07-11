@@ -1,0 +1,27 @@
+{
+  "app.title": "Archify AI",
+  "app.desc": "自然语言一键生成架构图",
+
+  "lang.zh": "中文",
+  "lang.en": "EN",
+
+  "tab.architecture": "架构图",
+  "tab.workflow": "流程图",
+  "tab.sequence": "时序图",
+  "tab.dataflow": "数据流图",
+  "tab.lifecycle": "生命周期图",
+
+  "input.placeholder": "请输入自然语言描述，例如：一个电商平台，前端 React，后端 Node.js，PostgreSQL 数据库，Redis 缓存",
+
+  "btn.generate": "生成架构图",
+  "btn.generating": "生成中...",
+
+  "examples.label": "试试以下示例：",
+
+  "preview.placeholder": "输入描述并点击生成，架构图将在此展示",
+  "preview.loading": "正在生成架构图...",
+
+  "error.timeout": "请求超时，请重试",
+  "error.network": "网络连接失败，请检查后端服务是否启动",
+  "error.default": "生成失败，请重试"
+}

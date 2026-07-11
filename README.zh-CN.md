@@ -2,151 +2,150 @@
 
 <div align="center">
 
-**Natural Language → Professional Architecture Diagrams**
+**自然语言 → 专业架构图**
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-20+-green.svg)](https://nodejs.org)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-[Read in English](README.md) · [中文版](README.zh-CN.md)
+[English](README.md) · [中文版](README.zh-CN.md)
 
 </div>
 
 ---
 
-## 🚀 Turn Ideas into Architecture Diagrams in Seconds
+## 🚀 用自然语言一键生成专业架构图
 
-**Archify AI** is an open-source tool that generates **professional-grade system architecture diagrams** from plain natural language descriptions. Powered by LLM (DeepSeek / OpenAI) and a custom SVG renderer, it helps engineers, architects, and students visualize complex systems instantly.
+**Archify AI** 是一个开源工具，只需用自然语言描述你的系统，就能**自动生成专业级别的架构图**。基于 LLM（DeepSeek / OpenAI）和自定义 SVG 渲染引擎，帮助工程师、架构师和学生快速可视化复杂系统。
 
-### ✨ Why Archify AI?
+### ✨ 为什么选择 Archify AI？
 
-| Problem | Solution |
-|---------|----------|
-| "Drawing diagrams is tedious" | **Describe it once** — Archify generates the diagram |
-| "Tools are too complex" | **Zero learning curve** — no drag-and-drop, no shape libraries |
-| "Diagrams get outdated" | **Regenerate anytime** — just update the description |
-| "Can't find the right tool" | **Open source & free** — self-host or use online |
+| 问题 | 解决 |
+|------|------|
+| "画架构图太费时间" | **描述一次** — Archify 自动生成 |
+| "工具太复杂" | **零学习成本** — 无需拖拽，无需学习图库 |
+| "图容易过时" | **随时重新生成** — 更新描述即可 |
+| "找不到合适的工具" | **开源免费** — 可自部署或在线使用 |
 
-### 🔥 Key Features
+### 🔥 核心功能
 
-- **🤖 AI-Powered Generation** — Describe your system in natural language, get a professional diagram JSON
-- **📊 5 Diagram Types** — Architecture, Workflow, Sequence, Dataflow, Lifecycle
-- **🎨 Premium SVG Rendering** — Clean, modern, publication-quality output
-- **🌐 Bilingual (中文 / English)** — Switch languages on the fly
-- **📦 Multiple Export Formats** — PNG, JPEG, WebP, SVG, clipboard copy
-- **🌙 Dark Theme** — Eye-candy glassmorphism design
-- **🔌 API-First Design** — REST API for easy integration
-- **🆓 Open Source** — MIT license, free for any use
+- **🤖 AI 驱动生成** — 自然语言描述，自动生成专业架构图 JSON
+- **📊 5 种图表类型** — 架构图、流程图、时序图、数据流图、生命周期图
+- **🎨 高质量 SVG 渲染** — 清晰、现代、可发表的质量
+- **🌐 中英文双语** — 一键切换语言
+- **📦 多种导出格式** — PNG、JPEG、WebP、SVG、剪贴板复制
+- **🌙 暗色主题** — 精致玻璃态设计风格
+- **🔌 API 优先** — REST API，方便集成
+- **🆓 开源免费** — MIT 许可证，任意使用
 
-### 🖼️ Preview
+### 🖼️ 界面预览
 
 ```
 ┌─────────────────────────────────────────────────────┐
 │  Archify AI                                          │
 │  ┌──────────────────────────────────────────────────┐ │
-│  │ [Architecture] [Workflow] [Sequence] [Dataflow]  │ │
-│  │                      [Lifecycle]                  │ │
+│  │ [架构图] [流程图] [时序图] [数据流图] [生命周期图]  │ │
 │  ├──────────────────────────────────────────────────┤ │
-│  │ Describe your system in natural language...       │ │
+│  │ 请输入自然语言描述，例如：一个电商平台...           │ │
 │  ├──────────────────────────────────────────────────┤ │
-│  │ [✨ Generate]                                      │ │
-│  │ Try an example:                                   │ │
-│  │ [E-commerce...] [Microservices...] [SaaS...]      │ │
+│  │ [✨ 生成架构图]                                    │ │
+│  │ 试试以下示例：                                     │ │
+│  │ [电商平台...] [微服务架构...] [SaaS平台...]         │ │
 │  ├──────────────────────────────────────────────────┤ │
 │  │                                                  │ │
-│  │         🖼️  Architecture Diagram                  │ │
+│  │         🖼️  架构图渲染区域                         │ │
 │  │                                                  │ │
 │  └──────────────────────────────────────────────────┘ │
 └─────────────────────────────────────────────────────┘
 ```
 
-### 🏗️ Architecture
+### 🏗️ 系统架构
 
 ```
-User Input (Natural Language)
+用户输入（自然语言）
         │
         ▼
 ┌─────────────────┐     ┌──────────────┐
-│   Frontend       │────▶│  Backend API  │
+│   前端           │────▶│  后端 API     │
 │  (React + Vite)  │◀────│  (Express)    │
 └─────────────────┘     └──────┬───────┘
                                │
                       ┌────────▼────────┐
-                      │   LLM Service    │
+                      │   LLM 服务       │
                       │ (DeepSeek/GPT)   │
                       └────────┬────────┘
                                │
                       ┌────────▼────────┐
                       │   JSON → HTML    │
-                      │  SVG Renderer    │
+                      │  SVG 渲染引擎    │
                       └─────────────────┘
 ```
 
-### 🛠️ Tech Stack
+### 🛠️ 技术栈
 
-| Layer | Technology |
+| 层 | 技术 |
 |-------|-----------|
-| **Frontend** | React 18, TypeScript, Vite 6, Tailwind CSS v4, shadcn/ui |
-| **Backend** | Node.js, Express, TypeScript, tsx |
-| **LLM** | DeepSeek / OpenAI compatible API |
-| **Rendering** | Custom SVG renderer (7 diagram types) |
-| **i18n** | react-i18next (中文 / English) |
-| **Monorepo** | npm workspaces |
+| **前端** | React 18, TypeScript, Vite 6, Tailwind CSS v4, shadcn/ui |
+| **后端** | Node.js, Express, TypeScript, tsx |
+| **LLM** | DeepSeek / OpenAI 兼容 API |
+| **渲染** | 自定义 SVG 渲染引擎（7 种图表类型） |
+| **国际化** | react-i18next (中文 / English) |
+| **仓库** | npm workspaces 单仓库 |
 
-### 📦 Quick Start
+### 📦 快速开始
 
 ```bash
-# 1. Clone
+# 1. 克隆
 git clone https://github.com/your-username/archify.git
 cd archify
 
-# 2. Install
+# 2. 安装依赖
 npm install
 
-# 3. Configure LLM
+# 3. 配置 LLM
 cp .env.example .env
-# Edit .env — set LLM_API_KEY
+# 编辑 .env — 填入 LLM_API_KEY
 
-# 4. Start (frontend + backend)
+# 4. 启动（前后端一起）
 npm run dev
 
-# Open http://localhost:5173
+# 打开 http://localhost:5173
 ```
 
-### 🔧 Configuration
+### 🔧 配置
 
-All config via `.env`:
+通过 `.env` 文件配置：
 
 ```env
-# LLM Provider (DeepSeek / OpenAI compatible)
+# LLM 提供商（DeepSeek / OpenAI 兼容格式）
 LLM_API_KEY=sk-xxx
 LLM_BASE_URL=https://api.deepseek.com
 LLM_MODEL=deepseek-chat
 LLM_TIMEOUT=60000
 LLM_MAX_RETRIES=2
 
-# Server
+# 服务端口
 PORT=3001
 ```
 
 ### 📡 API
 
 ```bash
-# Generate diagram JSON from natural language
+# 自然语言 → 架构图 JSON
 curl -X POST http://localhost:3001/api/generate \
   -H 'Content-Type: application/json' \
   -d '{"prompt":"微服务电商平台","diagramType":"architecture","language":"zh"}'
 
-# Render JSON to HTML
+# 架构图 JSON → HTML
 curl -X POST http://localhost:3001/api/render \
   -H 'Content-Type: application/json' \
   -d '{"json":{...},"diagramType":"architecture"}'
 ```
 
-### 🤝 Contributing
+### 🤝 参与贡献
 
-PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+欢迎提交 PR！详情请查看 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-### � License
+### 📄 开源协议
 
 [MIT](LICENSE)
