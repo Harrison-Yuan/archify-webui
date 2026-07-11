@@ -139,6 +139,12 @@ curl -X POST http://localhost:3001/api/render \
 
 PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-### � License
+### 📄 License
 
 [MIT](LICENSE)
+
+---
+
+### 🙏 Acknowledgments
+
+Special thanks to [tt-a1i](https://github.com/tt-a1i) for the original [archify](https://github.com/tt-a1i/archify) project — the SVG rendering engine and schema validators that power this web UI.

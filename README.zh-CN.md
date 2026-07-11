@@ -142,3 +142,9 @@ curl -X POST http://localhost:3001/api/render \
 ### 📄 开源协议
 
 [MIT](LICENSE)
+
+---
+
+### 🙏 致谢
+
+感谢 [tt-a1i](https://github.com/tt-a1i) 的 [archify](https://github.com/tt-a1i/archify) 原始项目 — 本 Web UI 的 SVG 渲染引擎和 Schema 校验器基于该项目构建。
